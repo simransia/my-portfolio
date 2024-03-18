@@ -1,29 +1,29 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import GirlWithLappy from "@/components/GirlWithLappy";
-import HtmlIcon from "@/assets/html5-icon.svg";
-import CssIcon from "@/assets/css-icon.svg";
-import JavascriptIcon from "@/assets/javascript-icon.svg";
-import ReactIcon from "@/assets/react-icon.svg";
-import TypescriptIcon from "@/assets/typescript-icon.svg";
-import MaterialIcon from "@/assets/material-ui-icon.svg";
-import TailwindIcon from "@/assets/tailwind-icon.svg";
-import HasuraIcon from "@/assets/hasura-icon.svg";
-import SassIcon from "@/assets/sass-icon.svg";
-import GitIcon from "@/assets/git-icon.svg";
-import GraphQlIcon from "@/assets/graphql-icon.svg";
-import GitHubIcon from "@/assets/github-icon.svg";
-import GitLabIcon from "@/assets/gitlab-icon.svg";
-import BootstrapIcon from "@/assets/bootstrap-icon.svg";
-import NextJsIcon from "@/assets/nextjsIcon.png";
-import CypressIcon from "@/assets/cypress.png";
-import FigmaIcon from "@/assets/figma.svg";
-import ReactHookFormIcon from "@/assets/reacthookform.png";
-import SIcon from "@/assets/s.svg";
-import RadixUiIcon from "@/assets/radix-ui-icon.png";
-import UiShadcnIcon from "@/assets/uiShadcn.png";
-import ReactNativeIcon from "@/assets/atom.png";
-import ReactQueryIcon from "@/assets/react-query.png";
+import HtmlIcon from "@/assets/images/html5-icon.svg";
+import CssIcon from "@/assets/images/css-icon.svg";
+import JavascriptIcon from "@/assets/images/javascript-icon.svg";
+import ReactIcon from "@/assets/images/react-icon.svg";
+import TypescriptIcon from "@/assets/images/typescript-icon.svg";
+import MaterialIcon from "@/assets/images/material-ui-icon.svg";
+import TailwindIcon from "@/assets/images/tailwind-icon.svg";
+import HasuraIcon from "@/assets/images/hasura-icon.svg";
+import SassIcon from "@/assets/images/sass-icon.svg";
+import GitIcon from "@/assets/images/git-icon.svg";
+import GraphQlIcon from "@/assets/images/graphql-icon.svg";
+import GitHubIcon from "@/assets/images/github-icon.svg";
+import GitLabIcon from "@/assets/images/gitlab-icon.svg";
+import BootstrapIcon from "@/assets/images/bootstrap-icon.svg";
+import NextJsIcon from "@/assets/images/nextjsIcon.png";
+import CypressIcon from "@/assets/images/cypress.png";
+import FigmaIcon from "@/assets/images/figma.svg";
+import ReactHookFormIcon from "@/assets/images/reacthookform.png";
+import SIcon from "@/assets/images/s.svg";
+import RadixUiIcon from "@/assets/images/radix-ui-icon.png";
+import UiShadcnIcon from "@/assets/images/uiShadcn.png";
+import ReactNativeIcon from "@/assets/images/atom.png";
+import ReactQueryIcon from "@/assets/images/react-query.png";
 import Image from "next/image";
 
 const Skills = () => {
@@ -37,7 +37,7 @@ const Skills = () => {
     const threshold = window.innerHeight * 3;
     console.log(window.scrollY, threshold, "here");
     if (window.scrollY >= threshold && containerRef.current) {
-      containerRef.current.style.top = `${threshold + 250}px`;
+      // containerRef.current.style.top = `${threshold + 250}px`;
       setReachedScrollEnd(true);
     } else if (containerRef.current) {
       setReachedScrollEnd(false);
@@ -106,16 +106,19 @@ const Skills = () => {
     },
   ];
 
+  //
   return (
-    <div className="w-full max-w-screen ">
+    <div className="w-full max-w-screen overflow-x-hidden">
       <div
         className={`${
           reachedThreshold ? "flex items-end w-full justify-center gap-2" : ""
         } h-[400vh] relative bg-pink-100`}
       >
         <p
-          className={`text-7xl ${
-            reachedThreshold ? "w-1/2 mb-20" : "w-full fixed top-6"
+          className={`text-4xl md:text-7xl ${
+            reachedThreshold
+              ? "w-1/2 px-4 mb-14 sm:mb-20 md:mb-10 lg:mb-20"
+              : "w-full fixed top-6"
           }  font-semibold text-center transition-all duration-500`}
         >
           Tech Stacks
@@ -130,8 +133,8 @@ const Skills = () => {
           ${
             reachedScrollEnd
               ? !reachedThreshold
-                ? "scale-[0.6] absolute"
-                : "scale-50 relative !top-28 lg:!top-36 xl:!top-40"
+                ? "scale-[0.6] absolute !top-[2400px] md:!top-[2500px] xl:!top-[2450px] mxl:!top-[2411px]"
+                : "scale-[0.7] sm:scale-50 relative !top-0 sm:!top-16 md:!top-20 lg:!top-28 xl:!top-40"
               : "fixed !top-[28%] scale-100"
           }
           `}
@@ -139,7 +142,7 @@ const Skills = () => {
           <GirlWithLappy />
         </div>
       </div>
-      <div className="flex py-5 justify-center gap-4 items-start">
+      <div className="flex px-10 sm:px-2 flex-col sm:flex-row py-5 justify-center gap-4 items-start">
         {skills.map((item, index) => (
           <div
             className="basis-1/4 py-2 rounded flex flex-col items-center"

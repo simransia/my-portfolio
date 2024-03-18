@@ -9,7 +9,7 @@ Title: Common Brimstone
 import React, { useRef, useEffect } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import Scene from "@/assets/common_brimstone (1).glb";
+import Scene from "@/assets/models/common_brimstone (1).glb";
 
 const ButterFly = (props) => {
   const butterFlyRef = useRef();

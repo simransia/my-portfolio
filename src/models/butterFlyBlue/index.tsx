@@ -9,7 +9,7 @@ Title: Animated Butterfly
 import React, { useRef, useEffect } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
-import Scene from "@/assets/animated_butterfly (1).glb";
+import Scene from "@/assets/models/animated_butterfly.glb";
 
 const BlueButterFly = (props) => {
   const butterFlyRef = useRef();

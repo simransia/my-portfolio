@@ -8,7 +8,7 @@ Title: Butterfly blue
 
 import React, { useRef, useEffect } from "react";
 import { useGLTF, useAnimations } from "@react-three/drei";
-import Scene from "@/assets/butterfly_blue.glb";
+import Scene from "@/assets/models/butterfly_blue.glb";
 
 const ShiningButterFly = (props) => {
   const group = useRef();
