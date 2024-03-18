@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  /* cursor: none !important; */
+}
+
+.s0 {
+  fill: #d6785e;
+}
+.s1 {
+  fill: #e29665;
+}
+.s2 {
+  fill: #fdf0f0;
+}
+.s3 {
+  fill: #fec56d;
+}
+.s4 {
+  fill: #81b4a7;
+}
+.s5 {
+  fill: #b2d7ce;
+}
+.s6 {
+  fill: #e26550;
+}
+.s7 {
+  fill: #fdd697;
+}
+.s8 {
+  fill: #5b5866;
+}
+.s9 {
+  fill: #a95d50;
+}
+.s10 {
+  fill: #dfcaca;
+}
+.s11 {
+  fill: #5a5665;
+}
+.s12 {
+  fill: #e6e6e6;
+}
+.s13 {
+  fill: #edfefd;
+}
+.s14 {
+  fill: #8a849b;
+}
+
+@keyframes enterFromLeft {
+  0% {
+    transform: translateX(-500%);
+    opacity: 1;
+  }
+  500% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes enterFromRight {
+  0% {
+    transform: translateX(500%);
+    opacity: 1;
+  }
+  500% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes enterFromTopLeft {
+  0% {
+    transform: translate(-500%, -500%);
+    opacity: 1;
+  }
+  500% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes enterFromTopRight {
+  0% {
+    transform: translate(500%, -500%);
+    opacity: 1;
+  }
+  500% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes enterFromBottomLeft {
+  0% {
+    transform: translate(-500%, 500%);
+    opacity: 1;
+  }
+  500% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes enterFromBottomRight {
+  0% {
+    transform: translate(500%, 500%);
+    opacity: 1;
+  }
+  500% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
