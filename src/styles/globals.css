@@ -118,3 +118,87 @@
     opacity: 1;
   }
 }
+
+:root {
+  /* Config */
+  --spinner-size: 200px;
+  --spinner-thickness: 4px;
+  --spinner-speed: 1.2s;
+  /* Assuming spinner-3d is always true and spinner-loops is always infinite for CSS conversion */
+}
+
+/* Spinner */
+.spinner {
+  position: relative;
+  margin: auto;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  width: var(--spinner-size);
+  height: var(--spinner-size);
+  border-radius: calc(var(--spinner-size) / 2);
+  border: var(--spinner-thickness) solid hsla(0, 0%, 100%, 0.1);
+  /* 3D effect adaptation */
+  -webkit-mask: linear-gradient(hsla(0, 0%, 0%, 0.1), hsla(0, 0%, 0%, 1) 90%);
+  transform-origin: 50% 60%;
+  transform: perspective(var(--spinner-size)) rotateX(66deg);
+  animation: spinner-wiggle var(--spinner-speed) infinite;
+}
+
+@keyframes spinner-wiggle {
+  30% {
+    transform: perspective(var(--spinner-size)) rotateX(66deg);
+  }
+  40% {
+    transform: perspective(var(--spinner-size)) rotateX(65deg);
+  }
+  50% {
+    transform: perspective(var(--spinner-size)) rotateX(68deg);
+  }
+  60% {
+    transform: perspective(var(--spinner-size)) rotateX(64deg);
+  }
+}
+
+.spinner:before,
+.spinner:after {
+  content: "";
+  position: absolute;
+  margin: calc(-1 * var(--spinner-thickness));
+  box-sizing: inherit;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  opacity: 0.05;
+  border: inherit;
+  border-color: transparent;
+  animation: spinner-spin var(--spinner-speed) cubic-bezier(0.6, 0.2, 0, 0.8)
+      infinite,
+    spinner-fade var(--spinner-speed) linear infinite;
+}
+
+.spinner:before {
+  border-top-color: hsl(190, 100%, 70%);
+}
+
+.spinner:after {
+  border-top-color: hsl(50, 80%, 70%);
+  animation-delay: calc(var(--spinner-speed) * 0.25);
+}
+
+@keyframes spinner-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner-fade {
+  20% {
+    opacity: 0.1;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.1;
+  }
+}

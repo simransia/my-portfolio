@@ -59,7 +59,6 @@ export default function Home() {
           {/* <ShiningButterFly scale={[0.1, 0.1, 0.1]} rotation={[1, -0.5, 0]} /> */}
           <directionalLight position={[-1, -1, 1]} intensity={1} />
           <directionalLight position={[1, -1, 1]} intensity={2} />
-
           <ambientLight intensity={1} />
           <hemisphereLight
             color="#F2D2BD"
