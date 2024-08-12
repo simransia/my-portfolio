@@ -1,4 +1,3 @@
-"use client";
 import React, { useState, useEffect, useRef } from "react";
 import GirlWithLappy from "@/components/GirlWithLappy";
 import HtmlIcon from "@/assets/images/html5-icon.svg";

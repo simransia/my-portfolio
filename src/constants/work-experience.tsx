@@ -1,13 +1,8 @@
-import ArticunoIcon from "@/assets/images/articuno.jpeg";
-import HacktoberfestIcon from "@/assets/images/hacktoberfest.jpeg";
-import FullIcon from "@/assets/images/full.jpeg";
-import PublicLabsIcon from "@/assets/images/public-labs.png";
-
 export const WORK_EXPERIENCE = [
   {
     title: "Frontend Developer",
     company_name: "Articuno Coding",
-    icon: ArticunoIcon,
+    icon: "/articuno.jpeg",
     iconBg: "#accbe1",
     date: "Nov 2023 - present",
     points: [
@@ -25,7 +20,7 @@ export const WORK_EXPERIENCE = [
   {
     title: "Open source contribution",
     company_name: "Hacktoberfest",
-    icon: HacktoberfestIcon,
+    icon: "/hacktoberfest.jpeg",
     iconBg: "#fbc3bc",
     date: "Jan 2021 - Feb 2022",
     points: [
@@ -38,7 +33,7 @@ export const WORK_EXPERIENCE = [
   {
     title: "Web Developer",
     company_name: "Full Creative",
-    icon: FullIcon,
+    icon: "/full.jpeg",
     iconBg: "#b7e4c7",
     date: "Jan 2022 - Jan 2023",
     points: [
@@ -51,7 +46,7 @@ export const WORK_EXPERIENCE = [
   {
     title: "Open source contribution",
     company_name: "Public Labs",
-    icon: PublicLabsIcon,
+    icon: "/public-labs.png",
     iconBg: "#b7e4c7",
     date: "March 2022 - April 2023",
     points: [

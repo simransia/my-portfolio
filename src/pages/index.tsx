@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useState } from "react";
@@ -17,14 +16,16 @@ export default function Home() {
   const adjustIslandForScreenSize = () => {
     let screenScale, screenPosition;
 
-    if (window.innerWidth < 768) {
-      screenScale = [0.01, 0.01, 0.01];
-      screenPosition = [0, -30, -80];
-      // setIsMobileScreen(true);
-    } else {
-      screenScale = [0.04, 0.04, 0.04];
-      screenPosition = [-18, -85, -220];
-      // setIsMobileScreen(false);
+    if (typeof window !== "undefined") {
+      if (window.innerWidth < 768) {
+        screenScale = [0.01, 0.01, 0.01];
+        screenPosition = [0, -30, -80];
+        // setIsMobileScreen(true);
+      } else {
+        screenScale = [0.04, 0.04, 0.04];
+        screenPosition = [-18, -85, -220];
+        // setIsMobileScreen(false);
+      }
     }
 
     return [screenScale, screenPosition];
@@ -42,7 +43,11 @@ export default function Home() {
       <div className="absolute top-8 left-1/2 text-white -translate-x-1/2">
         <Popup currentStage={currentStage} />
       </div>
-      <Canvas className="relative flex" camera={{ near: 0.1, far: 1000 }}>
+      <Canvas
+        // className="relative flex justify-start items-start"
+        className={`${isRotating ? "cursor-grabbing" : "cursor-grab"}`}
+        camera={{ near: 0.1, far: 1000 }}
+      >
         <Suspense fallback={<Loader />}>
           <CampScene
             isRotating={isRotating}
