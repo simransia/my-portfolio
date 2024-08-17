@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    domains: ["images.pexels.com"],
+  },
+
   webpack: (config) => {
     // ... other webpack config
 
@@ -10,6 +14,18 @@ const nextConfig = {
         filename: "static/chunks/[path][name].[hash][ext]",
       },
     });
+
+    // config.module.rules.push({
+    //   test: /\.(mp4)$/,
+    //   use: {
+    //     loader: "file-loader",
+    //     options: {
+    //       outputPath: "static/videos",
+    //       publicPath: "/_next/static/videos",
+    //       name: "[name].[hash].[ext]",
+    //     },
+    //   },
+    // });
 
     config.resolve.extensions.push(".js", ".mjs");
 

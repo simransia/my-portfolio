@@ -13,6 +13,9 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        playFair: ["Playfair Display", "serif"],
+      },
       screens: {
         "2md": "900px",
         mxl: "1468px",
