@@ -8,6 +8,7 @@ import BlueButterFly from "@/models/butterFlyBlue";
 import ShiningButterFly from "@/models/butterflyShining";
 import CampScene from "@/models/Camp";
 import Ring from "@/models/ring";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   const [currentStage, setCurrentStage] = useState(1);
@@ -40,6 +41,7 @@ export default function Home() {
       className="flex fixed z-0 bg-black  min-h-screen flex-col items-center justify-between"
       style={{ width: "100vw", height: "100vh" }}
     >
+      <Navbar />
       <div className="absolute top-8 left-1/2 text-white -translate-x-1/2">
         <Popup currentStage={currentStage} />
       </div>
@@ -67,7 +69,7 @@ export default function Home() {
           <ambientLight intensity={1} />
           <hemisphereLight
             color="#F2D2BD"
-            groundColor="#000000"
+            groundColor="#d6d1d1"
             intensity={2}
             position={[1, 1, 1]}
           />

@@ -204,3 +204,7 @@
     opacity: 0.1;
   }
 }
+
+.scrollbar-hide {
+  scrollbar-width: 0;
+}

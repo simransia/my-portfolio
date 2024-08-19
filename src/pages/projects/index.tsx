@@ -1,15 +1,35 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 // import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import { PERSONAL_PROJECTS } from "@/constants/projects";
+import { useRouter } from "next/router";
 
 const Projects = () => {
   const ref = useRef<HTMLDivElement | null>(null);
   const [loadedVideo, setLoadedVideo] = useState<number | null>(null);
   const { scrollYProgress } = useScroll({ target: ref });
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]);
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isBottom =
+        window.innerHeight + window.pageYOffset >= document.body.offsetHeight;
+
+      if (isBottom) {
+        // Navigate to a different page when reaching the end of the current page
+        router.push("/contact");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [router]);
 
   return (
     <motion.div
@@ -27,7 +47,7 @@ const Projects = () => {
             <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300" />
             {PERSONAL_PROJECTS.map((item) => (
               <div
-                className={`h-screen w-screen text-white flex items-center justify-center bg-gradient-to-r ${item.color}`}
+                className={`h-screen w-screen text-white flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300 ${item.color}`}
                 key={item.id}
               >
                 <div className="w-[70%] pl-32">
@@ -78,7 +98,7 @@ const Projects = () => {
           </motion.div>
         </div>
       </div>
-      <div className="w-screen h-screen flex flex-col gap-16 items-center justify-center text-center">
+      <div className="w-screen h-[10vh] bg-black flex flex-col gap-16 items-center justify-center text-center">
         {/* <h1 className="text-8xl"></h1> */}
       </div>
     </motion.div>

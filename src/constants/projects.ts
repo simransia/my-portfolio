@@ -1,7 +1,7 @@
 export const PERSONAL_PROJECTS = [
   {
     id: 1,
-    color: "from-red-300 to-blue-300",
+    color: "from-purple-300 to-red-300",
     title: "Disney Clone",
     desc: "Disney Clone built using ReactJs and Firebase and TMDB APIs. It also has AI search functionality using which you can search movies based on or mood by typing any kind of query in searchbar",
     img: "",
@@ -17,7 +17,7 @@ export const PERSONAL_PROJECTS = [
   },
   {
     id: 2,
-    color: "from-blue-300 to-violet-300",
+    color: "from-purple-300 to-red-300",
     title: "iNotebook",
     desc: "iNotebook is a full-stack application built using the MERN stack. It helps you to store your notes securely on the cloud. It also gives you the functionality to edit and delete your previous written notes.",
     img: "",
@@ -35,7 +35,7 @@ export const PERSONAL_PROJECTS = [
   },
   {
     id: 3,
-    color: "from-violet-300 to-purple-300",
+    color: "from-purple-300 to-red-300",
     title: "Meditation App",
     desc: "This app can be used for meditation and unwinding. It has 4 different themes containing different soothing sounds of nature like the sound of birds, the sound of rain, and the sound of sea waves, which are combined with the calming music of piano & flute.",
     img: "",
