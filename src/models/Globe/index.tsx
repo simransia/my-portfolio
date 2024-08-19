@@ -35,7 +35,7 @@ const Globe = ({ start }: { start: boolean }) => {
   });
 
   return (
-    <group ref={globeRef} {...props} scale={[2, 2, 2]} dispose={null}>
+    <group ref={globeRef} scale={[2, 2, 2]} dispose={null}>
       <group name="Sketchfab_Scene">
         <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
           <group name="sketchfabtimeframe">
