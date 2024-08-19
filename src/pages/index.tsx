@@ -38,11 +38,11 @@ export default function Home() {
 
   return (
     <div
-      className="flex fixed z-0 bg-black  min-h-screen flex-col items-center justify-between"
+      className="flex fixed z-0 bg-black font-Inter  min-h-screen flex-col items-center justify-between"
       style={{ width: "100vw", height: "100vh" }}
     >
       <Navbar />
-      <div className="absolute top-8 left-1/2 text-white -translate-x-1/2">
+      <div className="absolute top-12 left-1/2 z-20 text-white -translate-x-1/2">
         <Popup currentStage={currentStage} />
       </div>
       <Canvas
@@ -68,8 +68,8 @@ export default function Home() {
           <directionalLight position={[1, -1, 1]} intensity={2} />
           <ambientLight intensity={1} />
           <hemisphereLight
-            color="#F2D2BD"
-            groundColor="#d6d1d1"
+            color="#f8f8f4"
+            groundColor="#f3f2f2"
             intensity={2}
             position={[1, 1, 1]}
           />
