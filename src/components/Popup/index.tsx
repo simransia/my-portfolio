@@ -26,9 +26,9 @@ const index = ({ currentStage }: { currentStage: number }) => {
     return (
       <div className="bg-gradient-to-r rounded-md p-4 text-center bg-opacity-20 from-[rgba(148,152,77,0.4)] to-[rgba(47,158,25,0.4)]">
         <p className="font-medium lg:text-xl mb-3">
-          Through varied experiences, I've fostered a versatile skill set and
-          developed an unwavering drive for continuous improvement and acquiring
-          knowledge.
+          Through varied experiences, I&apos;ve fostered a versatile skill set
+          and developed an unwavering drive for continuous improvement and
+          acquiring knowledge.
         </p>
 
         <Link

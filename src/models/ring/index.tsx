@@ -2,8 +2,12 @@ import { useRef, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
-const Ring = (props) => {
-  const ref = useRef();
+type RingProps = {
+  position?: THREE.Vector3;
+};
+
+const Ring = (props: RingProps) => {
+  const ref = useRef<THREE.Mesh>();
 
   const textTexture = useMemo(() => {
     const canvas = document.createElement("canvas");

@@ -9,17 +9,25 @@ import { useFrame, useThree } from "@react-three/fiber";
 import { animated, useSpring } from "@react-spring/three";
 import * as THREE from "three";
 
+type CampProps = {
+  scale?: number[];
+  isRotating: boolean;
+  setIsRotating: React.Dispatch<React.SetStateAction<boolean>>;
+  position?: number[];
+  [key: string]: any;
+};
+
 const Camp = ({
   position,
   isRotating,
   setIsRotating,
   setCurrentStage,
   ...props
-}) => {
+}: CampProps) => {
   const { nodes, materials } = useGLTF(Scene);
   const { gl, viewport } = useThree();
 
-  const isSceneRef = useRef();
+  const isSceneRef = useRef<THREE.Group>();
 
   const lastX = useRef(0);
 
@@ -40,13 +48,14 @@ const Camp = ({
   }));
 
   // Handle pointer (mouse or touch) down event
-  const handlePointerDown = (event) => {
+  const handlePointerDown = (event: PointerEvent) => {
     console.log("PointerDown");
     event.stopPropagation();
     event.preventDefault();
     setIsRotating(true);
 
     // Calculate the clientX based on whether it's a touch event or a mouse event
+    //@ts-ignore
     const clientX = event.touches ? event.touches[0].clientX : event.clientX;
 
     // Store the current clientX position for reference
@@ -54,7 +63,7 @@ const Camp = ({
   };
 
   // Handle pointer (mouse or touch) up event
-  const handlePointerUp = (event) => {
+  const handlePointerUp = (event: PointerEvent) => {
     console.log("PointerUp ");
     event.stopPropagation();
     event.preventDefault();
@@ -62,12 +71,13 @@ const Camp = ({
   };
 
   // Handle pointer (mouse or touch) move event
-  const handlePointerMove = (event) => {
+  const handlePointerMove = (event: PointerEvent) => {
     console.log("PointerMove ");
     event.stopPropagation();
     event.preventDefault();
     if (isRotating) {
       // If rotation is enabled, calculate the change in clientX position
+      //@ts-ignore
       const clientX = event.touches ? event.touches[0].clientX : event.clientX;
 
       // calculate the change in the horizontal position of the mouse cursor or touch input,
@@ -92,7 +102,7 @@ const Camp = ({
   };
 
   // Handle keydown events
-  const handleKeyDown = (event) => {
+  const handleKeyDown = (event: KeyboardEvent) => {
     console.log("KeyDown");
     if (event.key === "ArrowLeft") {
       if (!isRotating) setIsRotating(true);
@@ -108,7 +118,7 @@ const Camp = ({
   };
 
   // Handle keyup events
-  const handleKeyUp = (event) => {
+  const handleKeyUp = (event: KeyboardEvent) => {
     console.log("KeyUp");
     if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
       setIsRotating(false);
