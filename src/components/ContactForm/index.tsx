@@ -23,6 +23,8 @@ const ContactForm = () => {
     setStart(false);
   };
 
+  console.log(process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID, "env");
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
@@ -30,8 +32,8 @@ const ContactForm = () => {
 
     emailjs
       .send(
-        "service_m69hdip",
-        "template_cqxksu8",
+        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
         {
           from_name: form.name,
           to_name: "Simran",
@@ -39,7 +41,7 @@ const ContactForm = () => {
           to_email: "simransia07@gmail.com",
           message: form.message,
         },
-        "roS75YOMgjQnHoxty"
+        process.env.NEXT_PUBLIC_EMAIL_PUBLIC_ID
       )
       .then(
         () => {
