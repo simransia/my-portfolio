@@ -7,12 +7,15 @@ import Globe from "@/models/Globe";
 import { OrbitControls } from "@react-three/drei";
 
 const ContactForm = () => {
-  const formRef = useRef();
+  const formRef = useRef<HTMLFormElement | null>(null);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
   const [start, setStart] = useState(false);
 
-  const handleChange = ({ target: { name, value } }) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
 
@@ -25,15 +28,24 @@ const ContactForm = () => {
 
   console.log(process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID, "env");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setStart(true);
 
+    const serviceId = process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID;
+    const publicId = process.env.NEXT_PUBLIC_EMAIL_PUBLIC_ID;
+
+    if (!serviceId || !templateId || !publicId) {
+      console.error("Missing email service configuration");
+      return;
+    }
+
     emailjs
       .send(
-        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
+        serviceId,
+        templateId,
         {
           from_name: form.name,
           to_name: "Simran",
@@ -41,7 +53,7 @@ const ContactForm = () => {
           to_email: "simransia07@gmail.com",
           message: form.message,
         },
-        process.env.NEXT_PUBLIC_EMAIL_PUBLIC_ID
+        publicId
       )
       .then(
         () => {
@@ -55,7 +67,7 @@ const ContactForm = () => {
               email: "",
               message: "",
             });
-          }, [3000]);
+          }, 1000);
         },
         (error) => {
           setLoading(false);
@@ -114,7 +126,7 @@ const ContactForm = () => {
             <label className="text-black-500 font-semibold">Your Message</label>
             <textarea
               name="message"
-              rows="4"
+              rows={4}
               className="w-full rounded-md bg-gray-800 bg-opacity-90 px-4 py-2 outline-none"
               placeholder="Write your thoughts here..."
               value={form.message}
