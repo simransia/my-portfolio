@@ -9,7 +9,7 @@ const Navbar = ({ currentStage }: { currentStage?: number }) => {
     pathname.includes("projects") || pathname.includes("work-experience");
 
   return (
-    <div className="fixed font-Inter font-semibold bg-orange-300 text-sm lg:text-base bg-opacity-20 flex justify-between z-40 top-0 text-white w-full">
+    <div className="fixed font-Inter font-semibold bg-orange-300 text-sm lg:text-base bg-opacity-20 flex justify-between z-40 top-0 text-gray-100 w-full">
       <div className="w-1/5 px-8">
         {pathname !== "/" ? (
           <Link
@@ -22,13 +22,14 @@ const Navbar = ({ currentStage }: { currentStage?: number }) => {
             <span
               className={`absolute left-0 bottom-[-2px] w-0 ${
                 changeTextColor ? "bg-gray-700" : "bg-white"
-              } h-[2px] bg-white rounded-t transition-all duration-300 group-hover:w-full`}
+              } h-[2px] rounded-t transition-all duration-300 group-hover:w-full`}
             ></span>
           </Link>
         ) : (
           <img
             src="https://media.giphy.com/media/Z96Ax1zh5aSsHczGve/giphy.gif"
             width="35"
+            alt=""
           />
         )}
       </div>
@@ -45,7 +46,7 @@ const Navbar = ({ currentStage }: { currentStage?: number }) => {
                 : "w-0"
             } ${
               changeTextColor ? "bg-gray-700" : "bg-white"
-            } h-[2px] bg-white rounded-t transition-all duration-300 group-hover:w-full`}
+            } h-[2px] rounded-t transition-all duration-300 group-hover:w-full`}
           ></span>
         </Link>
         <Link
@@ -60,7 +61,7 @@ const Navbar = ({ currentStage }: { currentStage?: number }) => {
                 : "w-0"
             } ${
               changeTextColor ? "bg-gray-700" : "bg-white"
-            } h-[2px] bg-white rounded-t transition-all duration-300 group-hover:w-full`}
+            } h-[2px] rounded-t transition-all duration-300 group-hover:w-full`}
           ></span>
         </Link>
         <Link
@@ -75,7 +76,7 @@ const Navbar = ({ currentStage }: { currentStage?: number }) => {
                 : "w-0"
             } ${
               changeTextColor ? "bg-gray-700" : "bg-white"
-            } h-[2px] bg-white rounded-t transition-all duration-300 group-hover:w-full`}
+            } h-[2px] rounded-t transition-all duration-300 group-hover:w-full`}
           ></span>
         </Link>
         <Link
