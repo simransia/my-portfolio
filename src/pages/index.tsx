@@ -7,7 +7,7 @@ import BlueButterFly from "@/models/butterFlyBlue";
 // import ShiningButterFly from "@/models/butterflyShining";
 // import ButterFly from "@/models/butterfly";
 import CampScene from "@/models/Camp/";
-// import Ring from "@/models/Ring";
+import Ring from "@/models/Ring";
 import Navbar from "@/components/Navbar";
 
 export default function Home() {
@@ -60,7 +60,7 @@ export default function Home() {
             rotation={[-0.1, -0.3, 0]}
             // isMobileScreen={isMobileScreen}
           />
-          {/*   <Ring position={[0, -0.8, 0]} />*/}
+          <Ring position={[0, -0.8, 0]} />
           {/* <ButterFly scale={[0.06, 0.06, 0.06]} rotation={[1, -0.5, 0]} /> */}
           <BlueButterFly scale={[0.08, 0.08, 0.08]} rotation={[1, 1.8, 0.2]} />
           {/* <ShiningButterFly scale={[0.1, 0.1, 0.1]} rotation={[1, -0.5, 0]} /> */}
