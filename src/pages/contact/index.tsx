@@ -33,9 +33,9 @@ const Contact = () => {
   // }, [isInitialLoad, router]);
 
   return (
-    <div className="bg-black overflow-x-hidden">
+    <div className="bg-black scrollbar-hide overflow-x-hidden">
       <div
-        className="flex sticky z-0 min-h-screen min-w-screen flex-col items-center justify-between"
+        className="flex sticky bg-black cursor-cell z-50 top-0 min-h-screen min-w-screen flex-col items-center justify-between"
         style={{ width: "100vw", height: "100vh" }}
       >
         <Canvas
@@ -66,6 +66,12 @@ const Contact = () => {
             </Suspense>
           </ScrollControls>
         </Canvas>
+        <img
+          src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3VicmJ3YjdzZ3FoOWR0aXl4enFzYmNkOHpwbW1jNDR6OWp4ZjFxNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/53UOssg34A1o3LVRlz/giphy.gif"
+          width="30"
+          alt=""
+          className="absolute top-1/2 -translate-y-1/2 right-20 rotate-90"
+        />
       </div>
       <div className="h-screen pt-20 w-screen ">
         <ContactForm />

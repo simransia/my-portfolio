@@ -9,7 +9,7 @@ const Navbar = ({ currentStage }: { currentStage?: number }) => {
     pathname.includes("projects") || pathname.includes("work-experience");
 
   return (
-    <div className="fixed font-Inter font-semibold bg-orange-300 text-sm lg:text-base bg-opacity-20 flex justify-between z-50 top-0 text-white w-full">
+    <div className="fixed font-Inter font-semibold bg-orange-300 text-sm lg:text-base bg-opacity-20 flex justify-between z-40 top-0 text-white w-full">
       <div className="w-1/5 px-8">
         {pathname !== "/" ? (
           <Link
