@@ -151,7 +151,7 @@ const ContactForm = () => {
             <Globe start={start} isMobile={true} />
           </Suspense>
         </Canvas>
-        <div className="mx-auto  mt-1">
+        <div className="mx-auto md:hidden mt-1">
           <ContactLinks />
         </div>
         <form
