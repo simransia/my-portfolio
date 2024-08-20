@@ -34,15 +34,15 @@ export default function Home() {
 
   const [scale, position] = adjustIslandForScreenSize();
 
-  console.log(currentStage);
+  console.log(currentStage, "currentStage");
 
   return (
     <div
       className="flex fixed z-0 bg-black font-Inter  min-h-screen flex-col items-center justify-between"
       style={{ width: "100vw", height: "100vh" }}
     >
-      <Navbar />
-      <div className="absolute top-12 left-1/2 z-20 text-white -translate-x-1/2">
+      <Navbar currentStage={currentStage} />
+      <div className="absolute top-14 left-1/2 z-20 text-white -translate-x-1/2">
         <Popup currentStage={currentStage} />
       </div>
       <Canvas
@@ -75,6 +75,12 @@ export default function Home() {
           />
         </Suspense>
       </Canvas>
+      <img
+        src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3VicmJ3YjdzZ3FoOWR0aXl4enFzYmNkOHpwbW1jNDR6OWp4ZjFxNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/53UOssg34A1o3LVRlz/giphy.gif"
+        width="30"
+        alt=""
+        className="relative bottom-10"
+      />
       <StarsCanvas />
     </div>
   );

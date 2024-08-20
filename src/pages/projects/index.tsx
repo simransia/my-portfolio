@@ -13,23 +13,23 @@ const Projects = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]);
   const router = useRouter();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const isBottom =
-        window.innerHeight + window.pageYOffset >= document.body.offsetHeight;
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const isBottom =
+  //       window.innerHeight + window.pageYOffset >= document.body.offsetHeight;
 
-      if (isBottom) {
-        // Navigate to a different page when reaching the end of the current page
-        router.push("/contact");
-      }
-    };
+  //     if (isBottom) {
+  //       // Navigate to a different page when reaching the end of the current page
+  //       router.push("/contact");
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [router]);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, [router]);
 
   return (
     <motion.div
@@ -39,7 +39,7 @@ const Projects = () => {
       transition={{ duration: 1 }}
     >
       <div className="h-[600vh] relative" ref={ref}>
-        <div className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center">
+        <div className="w-screen h-[calc(100vh-2rem)] flex items-center justify-center text-8xl text-center">
           My Works
         </div>
         <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
@@ -98,7 +98,7 @@ const Projects = () => {
           </motion.div>
         </div>
       </div>
-      <div className="w-screen h-[10vh] bg-black flex flex-col gap-16 items-center justify-center text-center">
+      <div className="w-screen h-4 bg-black flex flex-col gap-16 items-center justify-center text-center">
         {/* <h1 className="text-8xl"></h1> */}
       </div>
     </motion.div>

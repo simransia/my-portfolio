@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { Fragment } from "react";
@@ -7,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 function App({ Component, pageProps }: AppProps) {
   return (
     <Fragment>
-      {" "}
+      <Navbar />
       <Component {...pageProps} />
       <ToastContainer />
     </Fragment>

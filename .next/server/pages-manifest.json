@@ -1,11 +1,7 @@
 {
   "/_app": "pages/_app.js",
-  "/contact": "pages/contact.html",
-  "/": "pages/index.html",
-  "/work-experience": "pages/work-experience.html",
-  "/skills": "pages/skills.html",
-  "/projects": "pages/projects.html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/404": "pages/404.html"
+  "/projects": "pages/projects.js",
+  "/work-experience": "pages/work-experience.js"
 }
