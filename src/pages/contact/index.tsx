@@ -73,7 +73,7 @@ const Contact = () => {
           className="absolute top-[90%] right-16 rotate-90"
         />
       </div>
-      <div className="h-screen pt-20 w-screen ">
+      <div className="h-screen pt-8 w-screen ">
         <ContactForm />
       </div>
     </div>
