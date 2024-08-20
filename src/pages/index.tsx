@@ -79,7 +79,7 @@ export default function Home() {
         src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3VicmJ3YjdzZ3FoOWR0aXl4enFzYmNkOHpwbW1jNDR6OWp4ZjFxNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/53UOssg34A1o3LVRlz/giphy.gif"
         width="30"
         alt=""
-        className="relative bottom-10"
+        className="relative bottom-8"
       />
       <StarsCanvas />
     </div>
