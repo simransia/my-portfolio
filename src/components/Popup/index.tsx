@@ -14,7 +14,7 @@ const index = ({ currentStage }: { currentStage: number }) => {
         </h1>
         <Link
           href="/skills"
-          className="p-1 cursor-pointer px-2 rounded-md bg-gradient-to-r bg-opacity-40 bg-white shadow-md text-black font-semibold"
+          className="p-1 hover:text-gray-200 cursor-pointer px-2 rounded-md bg-gradient-to-r bg-opacity-40 bg-white shadow-md text-black font-semibold"
         >
           View skills snapshot
           {/* <img src={arrow} alt="arrow" className="w-4 h-4 object-contain" /> */}
@@ -33,7 +33,7 @@ const index = ({ currentStage }: { currentStage: number }) => {
 
         <Link
           href="/work-experience"
-          className="p-1 cursor-pointer px-2 rounded-md bg-gradient-to-r bg-opacity-40 bg-white shadow-md text-black font-semibold"
+          className="p-1 hover:text-gray-200 cursor-pointer px-2 rounded-md bg-gradient-to-r bg-opacity-40 bg-white shadow-md text-black font-semibold"
         >
           Explore Career Timeline
           {/* <img src={arrow} alt="arrow" className="w-4 h-4 object-contain" /> */}
@@ -52,7 +52,7 @@ const index = ({ currentStage }: { currentStage: number }) => {
 
         <Link
           href="/projects"
-          className="p-1 cursor-pointer px-2 rounded-md bg-gradient-to-r bg-opacity-40 bg-white shadow-md text-black font-semibold"
+          className="p-1 hover:text-gray-200 cursor-pointer px-2 rounded-md bg-gradient-to-r bg-opacity-40 bg-white shadow-md text-black font-semibold"
         >
           Discover My Creations
           {/* <img src={arrow} alt="arrow" className="w-4 h-4 object-contain" /> */}
@@ -71,7 +71,7 @@ const index = ({ currentStage }: { currentStage: number }) => {
 
         <Link
           href="/contact"
-          className="p-1 cursor-pointer px-2 rounded-md bg-gradient-to-r bg-opacity-40 bg-white shadow-md text-black font-semibold"
+          className="p-1 hover:text-gray-200 cursor-pointer px-2 rounded-md bg-gradient-to-r bg-opacity-40 bg-white shadow-md text-black font-semibold"
         >
           Let&apos;s talk
           {/* <img src={arrow} alt="arrow" className="w-4 h-4 object-contain" /> */}
