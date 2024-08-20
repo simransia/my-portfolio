@@ -6,7 +6,9 @@ const Navbar = ({ currentStage }: { currentStage?: number }) => {
   const pathname = usePathname();
 
   const changeTextColor =
-    pathname.includes("projects") || pathname.includes("work-experience");
+    pathname.includes("projects") ||
+    pathname.includes("work-experience") ||
+    pathname.includes("skills");
 
   return (
     <div className="fixed font-Inter font-semibold bg-orange-300 text-sm lg:text-base bg-opacity-20 flex justify-between z-40 top-0 text-gray-100 w-full">
