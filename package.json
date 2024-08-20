@@ -27,6 +27,7 @@
     "react-intersection-observer": "^9.13.0",
     "react-toastify": "^10.0.5",
     "react-vertical-timeline-component": "3.6.0",
+    "sharp": "^0.33.5",
     "three": "^0.159.0",
     "three-buffer-geometry-utils": "^1.0.0"
   },
@@ -34,6 +35,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-vertical-timeline-component": "^3.3.6",
     "autoprefixer": "^10.0.1",
     "css-loader": "^7.1.2",
     "eslint": "^8",
