@@ -12,7 +12,7 @@ export const opacity = {
   },
 };
 
-const Loader = () => {
+const Loader = ({ isContact }: { isContact?: boolean }) => {
   const [index, setIndex] = useState(0);
 
   const words = [
@@ -38,14 +38,16 @@ const Loader = () => {
   return (
     <Html>
       <div className="w-[50vw] relative right-[50%]">
-        <motion.p
-          variants={opacity}
-          initial="initial"
-          animate="enter"
-          className="text-white text-center w-full text-5xl font-bold"
-        >
-          &lt; {words[index]} /&gt; World!
-        </motion.p>
+        {!isContact && (
+          <motion.p
+            variants={opacity}
+            initial="initial"
+            animate="enter"
+            className="text-white text-center w-full text-5xl font-bold"
+          >
+            &lt; {words[index]} /&gt; World!
+          </motion.p>
+        )}
         <div className="spinner"></div>
       </div>
     </Html>
