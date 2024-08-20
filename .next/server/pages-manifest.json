@@ -3,8 +3,7 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/work-experience": "pages/work-experience.js",
-  "/contact": "pages/contact.js",
-  "/": "pages/index.js",
   "/projects": "pages/projects.js",
-  "/skills": "pages/skills.js"
+  "/": "pages/index.js",
+  "/contact": "pages/contact.js"
 }

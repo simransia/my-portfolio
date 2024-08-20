@@ -36,7 +36,7 @@ const Navbar = ({ currentStage }: { currentStage?: number }) => {
           />
         )}
       </div>
-      <div className="lg:w-1/3 w-[70%] sm:w-1/2 flex justify-around py-1 pr-2 md:pr-0">
+      <div className="lg:w-2/5 w-[70%] sm:w-1/2 flex justify-around py-1 pr-2">
         <Link
           href={"/skills"}
           className={`group relative ${changeTextColor ? "text-gray-700" : ""}`}
