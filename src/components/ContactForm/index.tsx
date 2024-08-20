@@ -16,7 +16,7 @@ const ContactLinks = () => {
       >
         {" "}
         <svg
-          className="sm:h-6 h-5 w-5 sm:w-6 text-white"
+          className="sm:h-6 h-5 w-5 sm:w-6 hover:text-yellow-200 text-white"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -32,7 +32,7 @@ const ContactLinks = () => {
       </Link>
       <Link target="_blank" className="" href={"https://github.com/simransia"}>
         <svg
-          className="sm:h-6 h-5 w-5 sm:w-6 text-white"
+          className="sm:h-6 h-5 w-5 sm:w-6 hover:text-yellow-200 text-white"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -45,7 +45,7 @@ const ContactLinks = () => {
       </Link>
       <Link target="_blank" href={"https://x.com/simransia07"}>
         <svg
-          className="sm:h-6 h-5 w-5 sm:w-6 text-white"
+          className="sm:h-6 h-5 w-5 sm:w-6 hover:text-yellow-200 text-white"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
