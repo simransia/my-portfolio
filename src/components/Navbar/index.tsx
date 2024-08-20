@@ -11,11 +11,11 @@ const Navbar = ({ currentStage }: { currentStage?: number }) => {
     pathname.includes("skills");
 
   return (
-    <div className="fixed font-Inter font-semibold bg-orange-300 text-sm lg:text-base bg-opacity-20 flex justify-between z-40 top-0 text-gray-100 w-full">
+    <div className="fixed font-Inter md:font-semibold bg-orange-300 text-xs sm:text-sm lg:text-base bg-opacity-20 flex justify-between z-40 top-0 text-gray-100 w-full">
       <div className="w-1/5 px-8">
         {pathname !== "/" ? (
           <Link
-            className={`group relative ${
+            className={`group relative inline-block pt-1 ${
               changeTextColor ? "text-gray-700" : ""
             }`}
             href={"/"}
@@ -30,12 +30,13 @@ const Navbar = ({ currentStage }: { currentStage?: number }) => {
         ) : (
           <img
             src="https://media.giphy.com/media/Z96Ax1zh5aSsHczGve/giphy.gif"
-            width="35"
+            // width="35"
+            className="w-8 md:w-9"
             alt=""
           />
         )}
       </div>
-      <div className="w-1/3 flex justify-around py-1">
+      <div className="lg:w-1/3 w-[70%] sm:w-1/2 flex justify-around py-1 pr-2 md:pr-0">
         <Link
           href={"/skills"}
           className={`group relative ${changeTextColor ? "text-gray-700" : ""}`}

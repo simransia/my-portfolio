@@ -5,7 +5,7 @@ const index = ({ currentStage }: { currentStage: number }) => {
   if (currentStage === 1)
     return (
       <div className="bg-gradient-to-r text-center rounded-md bg-opacity-20 p-4 from-[rgba(77,133,152,0.4)] to-[rgba(104,79,153,0.4)]">
-        <h1 className="sm:text-xl mb-3 px-6 sm:leading-snug neo-brutalism-blue text-white mx-5">
+        <h1 className="md:text-xl text-sm mb-3 px-6 sm:leading-snug text-white md:mx-5">
           Hi, this is
           <span className="font-semibold mx-2 text-white">Simran</span>
           👋

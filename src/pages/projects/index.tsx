@@ -39,7 +39,7 @@ const Projects = () => {
       transition={{ duration: 1 }}
     >
       <div className="h-[600vh] relative" ref={ref}>
-        <div className="w-screen h-[calc(100vh-2rem)] flex items-center justify-center text-8xl text-center">
+        <div className="w-screen h-[calc(100vh-2rem)] flex items-center justify-center text-6xl lg:text-8xl text-center">
           My Works
         </div>
         <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
@@ -47,14 +47,14 @@ const Projects = () => {
             <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300" />
             {PERSONAL_PROJECTS.map((item) => (
               <div
-                className={`h-screen w-screen text-white flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300 ${item.color}`}
+                className={`h-screen w-screen px-6 text-white flex flex-col md:flex-row items-center justify-center bg-gradient-to-r from-purple-300 to-red-300 ${item.color}`}
                 key={item.id}
               >
-                <div className="w-[70%] pl-32">
+                <div className="w-full md:w-[70%] md:pl-32">
                   <h1 className="text-xl mb-8 font-bold md:text-4xl lg:text-6xl">
                     {item.title}
                   </h1>
-                  <div className="relative w-11/12 mb-8 aspect-[17/9]">
+                  <div className="relative w-full md:w-11/12 mb-8 aspect-[17/9]">
                     <video
                       src={item.video}
                       autoPlay
@@ -73,11 +73,11 @@ const Projects = () => {
                       />
                     )} */}
                   </div>
-                  <p className="w-80 md:w-96 mb-6 italic lg:w-[500px] lg:text-lg xl:w-[600px]">
+                  <p className="w-full md:w-96 mb-6 italic lg:w-[500px] lg:text-lg xl:w-[600px]">
                     {item.desc}
                   </p>
                 </div>
-                <div className="w-[30%] pr-32 relative">
+                <div className="w-full md:w-[30%] pr-32 relative">
                   <p className="absolute right-40 -rotate-[25deg] -top-32">
                     <span className="font-playFair text-[10rem] text-[#43453a] italic font-extrabold text-opacity-20">
                       0{item.id}

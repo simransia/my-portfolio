@@ -25,15 +25,21 @@ const WorkExperience = () => {
       transition={{ duration: 1 }}
     >
       <div className="h-max relative">
-        <div className="w-screen h-[calc(100vh-2rem)] flex items-center justify-center text-8xl text-center">
-          Professional Experience
+        <div className="w-screen h-[calc(100vh-2rem)] flex items-center justify-center text-6xl lg:text-8xl text-center">
+          <span className="hidden sm:inline-block">
+            Professional Experience
+          </span>
+          <span className="sm:hidden">
+            Professional
+            <br /> Experience
+          </span>
         </div>
         <motion.div
           style={{ y: backgroundY }}
-          className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300"
+          className="h-[120vh] md:h-screen w-screen flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300"
         />
 
-        <div id="experience" className="mx-20">
+        <div id="experience" className="ml-3 mr-4 sm:mx-10 lg:mx-20">
           <VerticalTimeline lineColor="#ADD8E6">
             {WORK_EXPERIENCE.map((experience, index) => (
               <VerticalTimelineElement

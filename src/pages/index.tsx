@@ -42,7 +42,7 @@ export default function Home() {
       style={{ width: "100vw", height: "100vh" }}
     >
       <Navbar currentStage={currentStage} />
-      <div className="absolute top-14 left-1/2 z-20 text-white -translate-x-1/2">
+      <div className="absolute top-14 w-4/5 md:w-auto left-1/2 z-20 text-white -translate-x-1/2">
         <Popup currentStage={currentStage} />
       </div>
       <Canvas
