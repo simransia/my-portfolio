@@ -35,7 +35,7 @@ const Contact = () => {
   return (
     <div className="bg-black scrollbar-hide overflow-x-hidden">
       <div
-        className="flex sticky bg-black cursor-cell z-50 top-0 min-h-screen min-w-screen flex-col items-center justify-between"
+        className="flex sticky bg-black z-50 top-0 min-h-screen min-w-screen flex-col items-center justify-between"
         style={{ width: "100vw", height: "100vh" }}
       >
         <Canvas
