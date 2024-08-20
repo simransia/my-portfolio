@@ -3,7 +3,7 @@ import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
 type RingProps = {
-  position?: THREE.Vector3;
+  position?: THREE.Vector3 | [number, number, number];
 };
 
 const Ring = (props: RingProps) => {
