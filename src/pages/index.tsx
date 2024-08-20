@@ -6,8 +6,8 @@ import StarsCanvas from "@/components/Stars";
 import ButterFly from "@/models/butterfly";
 import BlueButterFly from "@/models/butterFlyBlue";
 import ShiningButterFly from "@/models/butterflyShining";
-import CampScene from "@/models/Camp";
-import Ring from "@/models/Ring";
+import CampScene from "@/models/Camp/";
+import Ring from "../models/Ring";
 import Navbar from "@/components/Navbar";
 
 export default function Home() {
