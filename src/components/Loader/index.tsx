@@ -12,7 +12,7 @@ export const opacity = {
   },
 };
 
-const Loader = ({ isContact }: { isContact?: boolean }) => {
+const Loader = ({ isHome }: { isHome?: boolean }) => {
   const [index, setIndex] = useState(0);
 
   const words = [
@@ -38,7 +38,7 @@ const Loader = ({ isContact }: { isContact?: boolean }) => {
   return (
     <Html>
       <div className="w-[50vw] relative right-[50%]">
-        {!isContact && (
+        {isHome && (
           <motion.p
             variants={opacity}
             initial="initial"

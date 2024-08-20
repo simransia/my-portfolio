@@ -9,12 +9,10 @@ import Scene from "@/assets/models/globe.glb";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
-const Globe = ({ start }: { start: boolean }) => {
+const Globe = ({ start, isMobile }: { start: boolean; isMobile?: boolean }) => {
   const globeRef = useRef<THREE.Group>(null);
   const { nodes, materials, animations } = useGLTF(Scene) as any;
   const { actions, names } = useAnimations(animations, globeRef);
-
-  console.log(animations, actions, "here");
 
   useEffect(() => {
     if (actions[names[0]]) {
@@ -35,7 +33,11 @@ const Globe = ({ start }: { start: boolean }) => {
   });
 
   return (
-    <group ref={globeRef} scale={[2, 2, 2]} dispose={null}>
+    <group
+      ref={globeRef}
+      scale={isMobile ? [2.8, 2.8, 2.8] : [2, 2, 2]}
+      dispose={null}
+    >
       <group name="Sketchfab_Scene">
         <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]}>
           <group name="sketchfabtimeframe">
