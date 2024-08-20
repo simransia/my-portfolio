@@ -6,14 +6,13 @@ import React, { useRef, useEffect, useState } from "react";
 import { useGLTF } from "@react-three/drei";
 import Scene from "@/assets/models/camp.glb";
 import { useFrame, useThree } from "@react-three/fiber";
-import { animated, useSpring } from "@react-spring/three";
+import { animated, SpringValue, useSpring } from "@react-spring/three";
 import * as THREE from "three";
 
 type CampProps = {
-  scale?: number[];
   isRotating: boolean;
   setIsRotating: React.Dispatch<React.SetStateAction<boolean>>;
-  position?: number[];
+  position?: any;
   [key: string]: any;
 };
 
@@ -24,10 +23,10 @@ const Camp = ({
   setCurrentStage,
   ...props
 }: CampProps) => {
-  const { nodes, materials } = useGLTF(Scene);
+  const { nodes, materials } = useGLTF(Scene) as any;
   const { gl, viewport } = useThree();
 
-  const isSceneRef = useRef<THREE.Group>();
+  const isSceneRef = useRef<THREE.Group>(null);
 
   const lastX = useRef(0);
 
@@ -72,9 +71,11 @@ const Camp = ({
 
   // Handle pointer (mouse or touch) move event
   const handlePointerMove = (event: PointerEvent) => {
-    console.log("PointerMove ");
     event.stopPropagation();
     event.preventDefault();
+
+    if (!isSceneRef.current) return;
+
     if (isRotating) {
       // If rotation is enabled, calculate the change in clientX position
       //@ts-ignore
@@ -103,7 +104,8 @@ const Camp = ({
 
   // Handle keydown events
   const handleKeyDown = (event: KeyboardEvent) => {
-    console.log("KeyDown");
+    if (!isSceneRef.current) return;
+
     if (event.key === "ArrowLeft") {
       if (!isRotating) setIsRotating(true);
 
@@ -146,6 +148,7 @@ const Camp = ({
 
   // This function is called on each frame update
   useFrame(() => {
+    if (!isSceneRef.current) return;
     // If not rotating, apply damping to slow down the rotation (smoothly)
     if (!isRotating && rotationSpeed.current !== 0) {
       // Apply damping factor

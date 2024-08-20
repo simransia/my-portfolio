@@ -16,8 +16,8 @@ type BlueButterFlyProps = {
 };
 
 const BlueButterFly = (props: BlueButterFlyProps) => {
-  const butterFlyRef = useRef<THREE.Group>();
-  const { nodes, materials, animations } = useGLTF(Scene);
+  const butterFlyRef = useRef<THREE.Group>(null);
+  const { nodes, materials, animations } = useGLTF(Scene) as any;
   const { actions, names } = useAnimations(animations, butterFlyRef);
 
   useEffect(() => {

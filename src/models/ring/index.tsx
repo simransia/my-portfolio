@@ -7,7 +7,7 @@ type RingProps = {
 };
 
 const Ring = (props: RingProps) => {
-  const ref = useRef<THREE.Mesh>();
+  const ref = useRef<THREE.Mesh>(null);
 
   const textTexture = useMemo(() => {
     const canvas = document.createElement("canvas");
@@ -64,6 +64,7 @@ const Ring = (props: RingProps) => {
   useFrame(({ clock }) => {
     const elapsedTime = clock.getElapsedTime();
     if (ref.current && ref.current.material) {
+      //@ts-ignore
       ref.current.material.uniforms.time.value = elapsedTime;
     }
   });

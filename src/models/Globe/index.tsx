@@ -10,8 +10,8 @@ import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
 const Globe = ({ start }: { start: boolean }) => {
-  const globeRef = useRef<THREE.Group>();
-  const { nodes, materials, animations } = useGLTF(Scene);
+  const globeRef = useRef<THREE.Group>(null);
+  const { nodes, materials, animations } = useGLTF(Scene) as any;
   const { actions, names } = useAnimations(animations, globeRef);
 
   console.log(animations, actions, "here");

@@ -9,9 +9,9 @@ import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
 const Cosmosphere = () => {
-  const globeRef = useRef<THREE.Group>();
+  const globeRef = useRef<THREE.Group>(null);
   const scroll = useScroll();
-  const { nodes, materials, animations } = useGLTF(Scene);
+  const { nodes, materials, animations } = useGLTF(Scene) as any;
 
   console.log(scroll, "hh");
 
