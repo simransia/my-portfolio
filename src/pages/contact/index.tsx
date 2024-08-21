@@ -46,7 +46,7 @@ const Contact = () => {
           <ScrollControls pages={3} damping={1}>
             <Suspense fallback={<Loader isHome={false} />}>
               <GlobeScene />
-              <OrbitControls enableZoom={false} enablePan={true} />
+              <OrbitControls enableZoom={false} enablePan={false} />
               <directionalLight position={[-1, -1, 1]} intensity={1} />
               <directionalLight position={[1, -1, 1]} intensity={2} />
               <ambientLight intensity={1} />
