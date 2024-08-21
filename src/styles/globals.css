@@ -210,3 +210,17 @@
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer 10+ */
 }
+
+@keyframes width-pulse {
+  0%,
+  100% {
+    width: 100%; /* Original width */
+  }
+  50% {
+    width: 105%; /* Slightly increase width */
+  }
+}
+
+.width-pulse {
+  animation: width-pulse 2s ease-in-out infinite;
+}
