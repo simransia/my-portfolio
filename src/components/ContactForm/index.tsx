@@ -166,7 +166,7 @@ const ContactForm = () => {
               type="text"
               name="name"
               className="w-full rounded-md bg-gray-800 bg-opacity-90 px-4 py-2 outline-none"
-              placeholder="John"
+              placeholder="name"
               required
               value={form.name}
               onChange={handleChange}
@@ -180,7 +180,7 @@ const ContactForm = () => {
               type="email"
               name="email"
               className="w-full rounded-md bg-gray-800 bg-opacity-90 px-4 py-2 outline-none"
-              placeholder="John@gmail.com"
+              placeholder="xyz@gmail.com"
               required
               value={form.email}
               onChange={handleChange}
