@@ -31,7 +31,7 @@ const Navbar = ({ currentStage }: { currentStage?: number }) => {
           <img
             src="https://media.giphy.com/media/Z96Ax1zh5aSsHczGve/giphy.gif"
             // width="35"
-            className="w-12 sm:w-9"
+            className="sm:w-9 w-7 min-w-[25px]"
             alt=""
           />
         )}
