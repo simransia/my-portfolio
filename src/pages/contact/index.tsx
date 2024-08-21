@@ -36,7 +36,7 @@ const Contact = () => {
     <div className="bg-black scrollbar-hide overflow-x-hidden">
       <div
         className="flex sticky bg-black z-50 top-0 min-h-screen min-w-screen flex-col items-center justify-between"
-        style={{ width: "100vw", height: "100vh" }}
+        style={{ width: "100vw", height: "100vh", touchAction: "pan-y" }}
       >
         <Canvas
           // className={`${isRotating ? "cursor-grabbing" : "cursor-grab"}`}
