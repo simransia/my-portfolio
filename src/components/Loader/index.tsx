@@ -12,7 +12,7 @@ export const opacity = {
   },
 };
 
-const Loader = ({ isHome }: { isHome?: boolean }) => {
+const Loader = ({ isHome = true }: { isHome?: boolean }) => {
   const [index, setIndex] = useState(0);
 
   const words = [
@@ -43,7 +43,7 @@ const Loader = ({ isHome }: { isHome?: boolean }) => {
             variants={opacity}
             initial="initial"
             animate="enter"
-            className="text-white text-center w-full text-5xl font-bold"
+            className="text-white text-center w-full text-2xl md:text-5xl font-bold"
           >
             &lt; {words[index]} /&gt; World!
           </motion.p>
