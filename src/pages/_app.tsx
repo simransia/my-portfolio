@@ -48,6 +48,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       audioRef.current
         .play()
         .catch((error) => console.log("Error playing audio:", error));
+      setIsPlayingMusic(true);
     }
   };
 
@@ -66,7 +67,12 @@ const App = ({ Component, pageProps }: AppProps) => {
       audioRef.current.volume = 0.4;
       audioRef.current.loop = true;
 
-      // Try playing the music when the page loads
+      // Attempt to autoplay on page load after a brief delay
+      setTimeout(() => {
+        startMusic();
+      }, 1000); // Slight delay to allow other components to load
+
+      // Ensure that user interaction can start music
       document.addEventListener("click", startMusic, { once: true });
     }
 
@@ -83,7 +89,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         onClick={toggleMusic}
         className="fixed cursor-pointer z-40 top-12 right-10"
       >
-        {isPlayingMusic ? <MusicOff /> : <Music />}
+        {isPlayingMusic ? <Music /> : <MusicOff />}
       </div>
       <Component {...pageProps} />
       <ToastContainer />
