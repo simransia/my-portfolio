@@ -22,7 +22,7 @@ export const WORK_EXPERIENCE = [
     company_name: "Hacktoberfest",
     icon: "/hacktoberfest.jpeg",
     iconBg: "#fbc3bc",
-    date: "Jan 2021 - Feb 2022",
+    date: "Oct 2022 - Oct 2022",
     points: [
       "Contributed to 5 open-source projects, successfully having 4+ pull requests merged.",
       "Enhanced features and fixed bugs in projects using technologies such as HTML5, CSS, and JavaScript.",
@@ -35,7 +35,7 @@ export const WORK_EXPERIENCE = [
     company_name: "Full Creative",
     icon: "/full.jpeg",
     iconBg: "#b7e4c7",
-    date: "Jan 2022 - Jan 2023",
+    date: "Jul 2022 - Sep 2022",
     points: [
       "Transformed provided design templates into code of high quality and maintainability, employing a tech stack inclusive of HTML, CSS, SASS, and JavaScript.",
       "Implemented responsive design principles to ensure websites adapt fluidly across different screen sizes and devices, providing an optimal viewing experience.",
