@@ -47,7 +47,7 @@ const Projects = () => {
             <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300" />
             {PERSONAL_PROJECTS.map((item) => (
               <div
-                className={`h-screen w-screen px-6 text-white flex flex-col md:flex-row items-center justify-center bg-gradient-to-r from-purple-300 to-red-300 ${item.color}`}
+                className={`h-screen w-screen px-6 text-white flex flex-col md:flex-row items-center justify-center bg-gradient-to-r ${item.color}`}
                 key={item.id}
               >
                 <div className="w-full md:w-[70%] md:pl-32">
@@ -55,23 +55,25 @@ const Projects = () => {
                     {item.title}
                   </h1>
                   <div className="relative w-full md:w-11/12 mb-8 aspect-[17/9]">
-                    <video
-                      src={item.video}
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      preload="auto"
-                      onCanPlay={() => setLoadedVideo(item.id)}
-                      className="absolute inset-0 object-cover hover:scale-[1.04] hover:rounded-xl cursor-pointer w-full h-full"
-                    />
-                    {/* {loadedVideo !== item.id && (
+                    <Link href={item.link} target="_blank">
+                      <video
+                        src={item.video}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="auto"
+                        onCanPlay={() => setLoadedVideo(item.id)}
+                        className="absolute inset-0 object-cover hover:shadow-lg hover:scale-[1.04] hover:rounded-xl cursor-pointer w-full h-full"
+                      />
+                      {/* {loadedVideo !== item.id && (
                       <img
                         src={item.img}
                         alt={item.title}
                         className="absolute inset-0 object-cover w-full h-full"
                       />
                     )} */}
+                    </Link>
                   </div>
                   <p className="w-full md:w-96 mb-6 italic lg:w-[500px] lg:text-lg xl:w-[600px]">
                     {item.desc}
