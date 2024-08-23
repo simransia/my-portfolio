@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRef } from "react";
 import { PERSONAL_PROJECTS } from "@/constants/projects";
 import { useRouter } from "next/router";
+import { MoveRight } from "lucide-react";
 
 const Projects = () => {
   const ref = useRef<HTMLDivElement | null>(null);
@@ -100,8 +101,17 @@ const Projects = () => {
           </motion.div>
         </div>
       </div>
-      <div className="w-screen h-4 bg-black flex flex-col gap-16 items-center justify-center text-center">
-        {/* <h1 className="text-8xl"></h1> */}
+      <div className="w-screen h-[calc(100vh-50px)] bg-black flex flex-col gap-16 items-center text-white justify-center text-center">
+        <h1 className="text-4xl lg:text-7xl">More Comming soon...🤍</h1>
+        <Link
+          href={"/contact"}
+          className="flex relative group items-center justify-center gap-2"
+        >
+          Visit Contact page <MoveRight />
+          <span
+            className={`absolute left-0 bottom-[-2px] w-0 bg-white h-[2px] rounded-t transition-all duration-300 group-hover:w-full`}
+          ></span>
+        </Link>
       </div>
     </motion.div>
   );
