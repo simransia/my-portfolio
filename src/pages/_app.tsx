@@ -5,6 +5,7 @@ import type { AppProps } from "next/app";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import audioFile from "@/assets/audio/audio.mp3";
+import Head from "next/head";
 
 const Music = () => (
   <svg
@@ -84,6 +85,52 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   return (
     <Fragment>
+      <Head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Simran | Frontend Developer Portfolio</title>
+        <meta
+          name="description"
+          content="Simran's portfolio showcases skills in React.js, Next.js, TypeScript, and more. Explore projects and experiences that highlight proficiency in frontend development."
+        />
+        <meta
+          name="keywords"
+          content="Frontend Developer, React.js, Next.js, TypeScript, Tailwind CSS, Portfolio, Web Development, Software Developer, Frontend Developer"
+        />
+        <meta name="author" content="Simran" />
+        <meta
+          property="og:title"
+          content="Simran | Frontend Developer Portfolio"
+        />
+        <meta
+          property="og:description"
+          content="Explore Simran's portfolio featuring frontend development projects using React.js, Next.js, and more."
+        />
+        <meta
+          property="og:image"
+          content="https://avatars.githubusercontent.com/u/88017902?v=4"
+        />
+        <meta
+          property="og:url"
+          content="https://avatars.githubusercontent.com/u/88017902?v=4"
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Simran | Frontend Developer Portfolio"
+        />
+        <meta
+          name="twitter:description"
+          content="Check out Simran's work as a frontend developer using React.js, Next.js, Typescript and other technologies."
+        />
+        <meta
+          name="twitter:image"
+          content="https://avatars.githubusercontent.com/u/88017902?v=4"
+        />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="theme-color" content="#317EFB" />
+      </Head>
       <Navbar />
       <div
         onClick={toggleMusic}
