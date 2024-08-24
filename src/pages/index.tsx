@@ -64,13 +64,13 @@ export default function Home() {
           {/* <ButterFly scale={[0.06, 0.06, 0.06]} rotation={[1, -0.5, 0]} /> */}
           <BlueButterFly scale={[0.08, 0.08, 0.08]} rotation={[1, 1.8, 0.2]} />
           {/* <ShiningButterFly scale={[0.1, 0.1, 0.1]} rotation={[1, -0.5, 0]} /> */}
-          <directionalLight position={[-1, -1, 1]} intensity={1} />
-          <directionalLight position={[1, -1, 1]} intensity={2} />
-          <ambientLight intensity={1} />
+          <directionalLight position={[-1, -1, 1]} intensity={4} />
+          <directionalLight position={[1, -1, 1]} intensity={4} />
+          <ambientLight intensity={2} />
           <hemisphereLight
-            color="#f8f8f4"
-            groundColor="#f3f2f2"
-            intensity={2}
+            color="#d11eb6"
+            groundColor="#f3f2f3"
+            intensity={3}
             position={[1, 1, 1]}
           />
         </Suspense>

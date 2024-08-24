@@ -23,7 +23,9 @@ const Camp = ({
   setCurrentStage,
   ...props
 }: CampProps) => {
-  const { nodes, materials } = useGLTF(Scene) as any;
+  const { nodes, materials } = useGLTF(
+    "https://res.cloudinary.com/dbstfw8yc/image/upload/v1724507920/simmi-portfolio/camp_eero5k.glb"
+  ) as any;
   const { gl, viewport } = useThree();
 
   const isSceneRef = useRef<THREE.Group>(null);
@@ -17863,12 +17865,6 @@ const Camp = ({
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.mesh_2936.geometry}
-        material={nodes.mesh_2936.material}
-      />
-      <mesh
-        castShadow
-        receiveShadow
         geometry={nodes.mesh_2937.geometry}
         material={nodes.mesh_2937.material}
       />
@@ -17889,12 +17885,6 @@ const Camp = ({
         receiveShadow
         geometry={nodes.mesh_2940.geometry}
         material={nodes.mesh_2940.material}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.mesh_2941.geometry}
-        material={nodes.mesh_2941.material}
       />
       <mesh
         castShadow
@@ -17983,12 +17973,6 @@ const Camp = ({
       <mesh
         castShadow
         receiveShadow
-        geometry={nodes.mesh_2956.geometry}
-        material={nodes.mesh_2956.material}
-      />
-      <mesh
-        castShadow
-        receiveShadow
         geometry={nodes.mesh_2957.geometry}
         material={nodes.mesh_2957.material}
       />
@@ -18051,12 +18035,6 @@ const Camp = ({
         receiveShadow
         geometry={nodes.mesh_2967.geometry}
         material={nodes.mesh_2967.material}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.mesh_2968.geometry}
-        material={nodes.mesh_2968.material}
       />
       <mesh
         castShadow
