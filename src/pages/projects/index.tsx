@@ -76,7 +76,7 @@ const Projects = () => {
                     )} */}
                     </Link>
                   </div>
-                  <p className="w-full md:w-96 mb-6 italic lg:w-[500px] lg:font-medium lg:text-lg xl:w-[600px]">
+                  <p className="w-full md:w-96 mb-6 italic lg:w-[500px] lg:font-medium lg:text-lg xl:w-[750px]">
                     {item.desc}
                   </p>
                 </div>
