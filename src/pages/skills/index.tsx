@@ -114,10 +114,10 @@ const Skills = () => {
         } h-[400vh] relative bg-pink-100`}
       >
         <p
-          className={`text-4xl md:text-7xl ${
+          className={`text-5xl md:text-7xl ${
             reachedThreshold
               ? "w-1/2 px-4 mb-14 sm:mb-20 md:mb-10 lg:mb-20"
-              : "w-full fixed top-6"
+              : "w-full fixed top-16 md:top-12"
           }  font-semibold text-center transition-all duration-500`}
         >
           Tech Stacks
