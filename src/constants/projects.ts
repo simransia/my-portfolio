@@ -36,6 +36,25 @@ export const PERSONAL_PROJECTS = [
     ],
   },
   {
+    id: 2,
+    color: "from-purple-300 to-red-300",
+    title: "My Portfolio",
+    desc: "Created a 3d portfolio, which showcases my skills and projects in an interactive and dynamic way, offering users a unique experience. The portfolio features smooth animations, 3D models, and interactive elements that respond to user actions.",
+    img: "",
+    link: "https://www.simransia.in/",
+    video:
+      "https://res.cloudinary.com/dbstfw8yc/video/upload/v1724515242/simmi-portfolio/portfolio-final_ykzr8s.mp4",
+    techStacks: [
+      "Next js",
+      "Typescript",
+      "Tailwind CSS",
+      "Three js",
+      "React three Fiber",
+      "React Three drei",
+      "Framer Motion",
+    ],
+  },
+  {
     id: 3,
     color: "from-purple-300 to-red-300",
     title: "Meditation App",

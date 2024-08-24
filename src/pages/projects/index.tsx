@@ -43,7 +43,7 @@ const Projects = () => {
         <div className="w-screen h-[calc(100vh-2rem)] flex items-center justify-center text-6xl lg:text-8xl text-center">
           My Works
         </div>
-        <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
+        <div className="sticky top-0 flex h-screen w-screen gap-4 items-center overflow-hidden">
           <motion.div style={{ x }} className="flex">
             <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300" />
             {PERSONAL_PROJECTS.map((item) => (
@@ -76,7 +76,7 @@ const Projects = () => {
                     )} */}
                     </Link>
                   </div>
-                  <p className="w-full md:w-96 mb-6 italic lg:w-[500px] lg:text-lg xl:w-[600px]">
+                  <p className="w-full md:w-96 mb-6 italic lg:w-[500px] lg:font-medium lg:text-lg xl:w-[600px]">
                     {item.desc}
                   </p>
                 </div>
@@ -86,11 +86,11 @@ const Projects = () => {
                       0{item.id}
                     </span>
                   </p>
-                  <p className="text-xl mb-4">Tech Stacks</p>
+                  <p className="text-xl font-medium mb-4">Tech Stacks</p>
                   {item.techStacks.map((skill, ind) => (
                     <span
                       key={ind}
-                      className="inline-block m-1 bg-slate-50 bg-opacity-20 px-2 rounded-full"
+                      className="inline-block m-1 break-keep py-1 bg-black bg-opacity-25 px-2 lg:px-4 rounded-full"
                     >
                       {skill}
                     </span>
