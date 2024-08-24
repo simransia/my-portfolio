@@ -41,7 +41,11 @@ const Projects = () => {
     >
       <div className="h-[600vh] relative" ref={ref}>
         <div className="w-screen h-[calc(100vh-2rem)] flex items-center justify-center text-6xl lg:text-8xl text-center">
-          My Works
+          <span className="hidden sm:inline-block">Personal Projects</span>
+          <span className="sm:hidden">
+            Personal
+            <br /> Projects
+          </span>
         </div>
         <div className="sticky top-0 flex h-screen w-screen gap-4 items-center overflow-hidden">
           <motion.div style={{ x }} className="flex">
