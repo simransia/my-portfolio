@@ -6,7 +6,7 @@ export const WORK_EXPERIENCE = [
     iconBg: "#accbe1",
     date: "Nov 2023 - present",
     points: [
-      "Spearheaded the development of dynamic, responsive web applications using Next js, optimizing for usability, speed, and scalability.",
+      "Worked on the development of dynamic, responsive web applications using Next js, optimizing for usability, speed, and scalability.",
       "Designed and implemented mobile-first user interfaces with React Native for cross-platform app development, ensuring seamless user experience across iOS and Android devices.",
       "Leveraged TypeScript to enforce type safety and improve code reliability and maintainability across large-scale projects.",
       "Incorporated Tailwind CSS to create custom, responsive designs with ease, ensuring a seamless user experience across all device sizes.",
