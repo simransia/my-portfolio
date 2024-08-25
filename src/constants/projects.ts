@@ -36,7 +36,7 @@ export const PERSONAL_PROJECTS = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     color: "from-purple-300 to-red-300",
     title: "My Portfolio",
     desc: "Created a 3d portfolio, which showcases my skills and projects in an interactive and dynamic way, offering users a unique experience. The portfolio features smooth animations, 3D models, and interactive elements that respond to user actions.",
@@ -55,7 +55,7 @@ export const PERSONAL_PROJECTS = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     color: "from-purple-300 to-red-300",
     title: "Meditation App",
     desc: "This app can be used for meditation and unwinding. It has 4 different themes containing different soothing sounds of nature like the sound of birds, the sound of rain, and the sound of sea waves, which are combined with the calming music of piano & flute.",
@@ -66,7 +66,7 @@ export const PERSONAL_PROJECTS = [
     techStacks: ["HTML", "CSS", "Javascript"],
   },
   {
-    id: 4,
+    id: 5,
     color: "from-purple-300 to-red-300",
     title: "Images Gallary",
     desc: "Click on the images to see the beautiful animations :) along with inspiraing quotes to make your day",
