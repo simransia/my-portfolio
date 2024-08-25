@@ -11,7 +11,7 @@ const Projects = () => {
   const ref = useRef<HTMLDivElement | null>(null);
   const [loadedVideo, setLoadedVideo] = useState<number | null>(null);
   const { scrollYProgress } = useScroll({ target: ref });
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-83%"]);
   const router = useRouter();
 
   // useEffect(() => {
@@ -52,7 +52,7 @@ const Projects = () => {
             <div className="h-screen w-screen flex items-center justify-center bg-gradient-to-r from-purple-300 to-red-300" />
             {PERSONAL_PROJECTS.map((item) => (
               <div
-                className={`h-screen w-screen px-6 text-white flex flex-col md:flex-row items-center justify-center bg-gradient-to-r ${item.color}`}
+                className={`h-screen w-screen min-w-screen px-6 text-white flex flex-col md:flex-row items-center justify-center bg-gradient-to-r ${item.color}`}
                 key={item.id}
               >
                 <div className="w-full md:w-[70%] md:pl-32">
